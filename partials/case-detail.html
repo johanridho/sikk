@@ -1,0 +1,59 @@
+<title>{{case.judul}}</title>
+<div class="container">
+	<div class="row">
+		<br>
+		<h4 class="center">{{case.judul}}</h4>
+		<div class="col s1 offset-s11">
+			<a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper black-text"><i class="material-icons black-text">visibility</i>{{case.watcher}}</a>		
+		</div>
+		<hr>		
+
+		<div class="col s12 m12 l12 case-detail">
+			<h5>Deskripsi Umum</h5>
+			<h6>Nomor Perkara</h6>
+			<span>{{case.nomor_perkara}}</span>
+			<h6>Tanggal Pendaftaran Kasus</h6>
+			<span>{{case.tanggal_pendaftaran}}</span>
+			<h6>Dakwaan</h6>
+			<span>{{case.dakwaan}}</span>					
+			<h6>Terdakwa</h6>
+			<span>{{case.terdakwa}}</span>			
+
+			<div ng-if="case.proses > 0">
+				<hr>
+				<h5>Penetapan</h5>				
+				<h6>Majelis Hakim</h6>
+				<span>Ketua : {{case.hakim.ketua}}</span>
+				<br>
+				<span>Anggota : {{case.hakim.anggota1}}, {{case.hakim.anggota2}}, {{case.hakim.anggota3}}</span>				
+			</div>
+
+			<div ng-if="case.proses > 1">
+				<hr>
+				<h5>Putusan</h5>
+				<h6>Status Putusan</h6>
+				<span>{{case.status_putusan}}</span>
+			</div>
+
+			<div ng-if="case.proses > 2">
+				<hr>
+				<h5>Kasasi</h5>			
+			</div>
+
+			<div ng-if="case.proses > 3">
+				<hr>
+				<h5>Putusan Kasasi</h5>			
+				<hr>
+			</div>	
+
+		</div>
+
+		<div class="col s12 m12 l12">						
+			Komplain Keterlambatan Kasus:
+			{{case.komplain_kemandekan}}
+			&nbsp;
+			<a ng-click="incrementKemandekan(case)" class="waves-effect waves-light btn grey darken-3">+</a>
+		</div>
+
+	</div>
+</div>

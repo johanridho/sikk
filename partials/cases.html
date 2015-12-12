@@ -1,0 +1,14 @@
+<title>Daftar Kasus</title>
+<!-- <h4 class="center">Daftar Kasus Korupsi</h4> -->
+<br>
+<div class="container">
+	<ul class="collection">
+	    <li ng-repeat="case in cases" class="collection-item avatar">
+	      <a href="#/cases/{{case.$id}}" class="title grey-text text-darken-2">{{case.judul}}</a>
+	      <br>
+		  <span>{{case.terdakwa}} </span>
+		  <br>
+	      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper black-text"><i class="material-icons black-text">visibility</i>{{case.watcher}}</a>           
+	    </li>
+	</ul>
+</div>

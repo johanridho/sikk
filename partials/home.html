@@ -1,0 +1,61 @@
+<title>SIKK</title>
+
+	<!-- <div class="row"> -->
+		
+
+			<!-- <h4 class="center red">Pilihan Editor</h4> -->
+		<div id="home">
+			<div>
+				<h4 class="center red-text text-lighten-2">Kasus Teratas</h4>				
+				<div class="container">
+					<hr class="red lighten-2">
+					<ul class="collection">
+					    <li ng-repeat="case in cases" class="collection-item avatar grey lighten-5">
+					      <a href="#/cases/{{case.$id}}" class="title grey-text text-darken-2">{{case.judul}}</a>
+					      <br>
+						  <span>{{case.terdakwa}} </span>
+						  <br>
+					      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper black-text"><i class="material-icons">visibility</i>{{case.watcher}}</a>           
+					    </li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="grey lighten-3">
+				<div class="container">
+					<h4 class="center red-text text-lighten-2">Koruptor Teratas</h4>
+					<hr class="red lighten-2">
+				
+					<div class="row">
+
+					  	<div ng-repeat="corruptor in corruptors" class="col s12 m3 l3">
+					      <a href="#/corruptors/{{corruptor.$id}}">
+					        <div class="card z-depth-1 hoverable waves-effect waves-light grey-text text-darken-2 corruptor-card">
+					          <div class="card-content center">
+					            <p class="red-text text-lighten-2">{{corruptor.value}}</p>
+					            <br>
+					            <img src="{{corruptor.photo}}" class="circle">
+					            <br>
+					            <strong>{{corruptor.name}}</strong>
+					            <p>{{corruptor.profession}}</p>
+					          </div>
+					        </div>
+					      </a>
+					   	</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div class="container">
+					<h4 class="center red-text text-lighten-2">Trivia</h4>
+					<!-- <hr class="red lighten-2"> -->
+					<div class="card-panel z-depth-1">
+						<h6 class="center">{{trivia.trivia}}</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- </div> -->

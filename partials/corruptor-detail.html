@@ -1,0 +1,64 @@
+<title>{{corruptor.name}}</title>
+
+<br>
+
+<div class="container">
+	<div class="row">
+		
+	    <div class="col s12 m4 l4">
+	      <div class="card z-depth-2">
+	        <div class="card-image">
+	          <img src="{{corruptor.photo}}">
+	        </div>
+	        <div class="card-content corruptor-icon center grey lighten-3">
+	          	<div class="col s4 m4 l4">
+	          		<img ng-click="incrementBrick()" src="img/brick.png">{{corruptor.reactions.brick}}
+				</div>
+		      	<div class="col s4 m4 l4">
+		      		<img ng-click="incrementFire()" src="img/fire.png">{{corruptor.reactions.fire}}
+		      	</div>
+		      	<div class="col s4 m4 l4">
+		      		<img ng-click="incrementHeart()" src="img/heart.png">{{corruptor.reactions.heart}}
+		      	</div>
+		      	<div class="col s4 m4 l4">
+		      		<img ng-click="incrementMouse()" src="img/mouse.png">{{corruptor.reactions.mouse}}
+		      	</div>
+		      	<div class="col s4 m4 l4">
+		      		<img ng-click="incrementPoop()" src="img/poop.png">{{corruptor.reactions.poop}}
+		      	</div>
+		      	<div class="col s4 m4 l4">
+		      		<img ng-click="incrementSkull()" src="img/skull.png">{{corruptor.reactions.skull}}
+		      	</div>
+		      	<p>&nbsp;</p>
+	        </div>        
+	      </div>
+	    </div>
+
+		<div class="col s12 m8 l8 corruptor-detail">
+
+			<table class="bordered striped">
+				<tbody>
+					<tr>
+						<td>Nama</td>
+						<td>{{corruptor.name}}</td>
+					</tr>
+					<tr>
+						<td>Profesi</td>
+						<td>{{corruptor.profession}}</td>
+					</tr>
+					<tr>
+						<td>Jumlah Korupsi</td>
+						<td>{{corruptor.value}}</td>
+					</tr>
+					<tr>
+						<td>Kelas</td>
+						<td>{{corruptorGrade}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="sikk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  	<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+	<header>
+	  <div class="navbar-fixed">
+	    <nav class="red lighten-2" role="navigation">
+	      <div class="nav-wrapper">
+	        <a class="brand-logo center" href="#!" ui-sref="/">SIKK</a>
+	        <ul id="nav-mobile">
+		        <li><a href="#/cases">Kasus</a></li>
+		        <li><a href="#/corruptors">Koruptor</a></li>
+		    </ul>
+	        <!-- <form class="right">
+	          <div class="input-field">
+	            <input id="search-input" type="search">
+	            <label class="right" for="search-input"><i class="material-icons">search</i></label>
+	            <i id="search-close" class="material-icons">close</i>
+	          </div>
+	        </form> -->
+	      </div>
+	    </nav>
+	  </div>
+	</header>
+
+	<main>		
+	 	<div ng-view></div>	 	
+	</main>
+
+ 	<footer class="page-footer white">
+	  <div class="footer-copyright red lighten-2">
+	    <div class="container white-text">&copy; 2015 | Senyum Manja Team</div>
+	  </div>
+	</footer>
+
+</body>
+</html>

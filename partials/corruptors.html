@@ -1,0 +1,24 @@
+<title>Koruptor</title>
+
+<!-- <h4 class="center">Koruptor</h4> -->
+<br>
+<div class="container">
+  <div class="row">
+
+    <div ng-repeat="corruptor in corruptors" class="col s12 m3 l3">
+      <a href="#/corruptors/{{corruptor.$id}}">
+        <div class="card z-depth-1 hoverable waves-effect waves-light grey-text text-darken-2 corruptor-card">
+          <div class="card-content center">
+            <p class="red-text text-lighten-2">{{corruptor.value}}</p>
+            <br>
+            <img src="{{corruptor.photo}}" class="circle">
+            <br>
+            <strong>{{corruptor.name}}</strong>
+            <p>{{corruptor.profession}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
